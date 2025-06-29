@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
 }
 
 html{
@@ -212,8 +213,9 @@ nav .right a span{
 }
 
 .contact-section .group{
-    display: flex;
-    gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10%;
 }
 
 .contact-section .group .text{
@@ -227,16 +229,12 @@ nav .right a span{
     flex-direction: column;
 }
 
-.contact-section .group form input,
 .contact-section .group form textarea{
-    font-family: 'poppins', sans-serif;
-    border: 2px solid var(--link-color);
-    background-color: transparent;
-    padding: 10px;
-    margin-bottom: 15px;
-    outline: none;
-    resize: none;
+    border: none;
 }
+
+
+
 
 .contact-section .group form button {
     font-size: 16px;
@@ -253,83 +251,144 @@ nav .right a span{
     filter: brightness(.9);
 }
 
-/* Section 4:Contact */
 .contact-section.group{
     flex-direction: column;
 }
 
+/* FORM */
+/* form-css */
 
 
-
-@media (max-width: 850px) {
-    /* SECTION 1 :hero */
-    .hero-section.text h2{
-        font-size: 35px;
-    }
-} 
-
-
-@media (max-width: 740px) {
-    /* SECTION 1 :hero */
-    .hero-section{
-        flex-direction: column-reverse;
+    form textarea{
+        padding: 2%;
     }
 
-    .hero-section .headshot img{
-        width: 300px;
+  .input-group {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .input-group__label {
+    position: absolute;
+    top: 13px;
+    left: 5px;
+    padding: 0 5px;
+    color: #aaa;
+    transition: top 0.2s ease, font-size 0.2s ease, line-height 0.2s ease;
+    pointer-events: none;
+  }
+  
+  .input-group__input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 0 10px;
+  }
+  
+  .input-group__input:focus {
+    outline: none;
+    border: 1px solid #0086e4;
+  }
+  
+  .input-group__input:not(:placeholder-shown) + .input-group__label,
+  .input-group__input:focus + .input-group__label{
+    top: -5px;
+    font-size: 12px;
+    color: #0086e4;
+    background-color: white;
+  }
+
+ 
+  
+    .email-group{
+      margin-bottom: 20px;
+      position: relative;
     }
+
+  .email-group__input{
+    width:100%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 0 5px;
+  }
+
+  .email-group__input:focus {
+    outline: none;
+    border: 1px solid #0086e4;
+  }
+
+
+
+  /* footer */
+
+  .footer-outerlayer{
+    background-color: #cfcaca;
+  }
+
+ .footer-head{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 5%;
+ }
+
+ .left-lets h3 {
+    font-weight: 600;
+    text-align: center;
+ }
+
+ .social-media{
+    text-align: center;
+    align-content: center;
+ }
+
+ .say{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+ }
+
+ .say button{
+    background-color: #6244C5;
+    border: none;
+    border-radius: 10px;
+    color: #FFFF;
+    padding: 1% 5%;
+ }
+
+ .say button:hover{
+    opacity: 0.7;
+ }
+
+ .footer-content{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5%;
+ }
+
+.about-head{
+    font-weight: 700;
+    color: #898787;
 }
 
-
-@media (max-width: 600px) {
-    /* NAVBAR */
-    nav {
-        padding: 0 20px;
-    }
-
-
-nav .right a{
-    font-size: 22px;
-}
-nav .right a:last-child{
-    color:var(--text-color);
-    background-color: transparent;
-    padding: 0;
+.about-title{
+    margin-bottom: 5%;
 }
 
-nav .right a span{
-    display: none;
+.about-content{
+    margin-bottom: 5%;
+    font-size: 14px;
+    font-weight: 500;
 }
 
-/* Section 1:hero */
-.hero-section{
-    padding: 0 20px;
-
-    .hero-section .text h2{
-    font-size: 30px;
-    }
+.copyright{
+    display: flex;
+    justify-content: center;
+    padding-top: 1% 0%;
 }
 
-/* Section 2 : Skill */
-.skills-section{
-    padding: 0 20px;
+.copyright{
+    font-size: 15px;
 }
-
-.skills-section .cells .cell span{
-    font-size: 16px;
-}
-
-}
-
-/* Section :3 Testimony */
-.testimony-section{
-    padding: 0 20px;
-}
-
-/* Section 4:Contact */
-.contact-section{
-    padding: 0 20px;
-}
-
-
+  
 
